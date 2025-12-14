@@ -43,7 +43,29 @@ twi_dict = {
         'come': 'Bra',
         'go': 'KƆ',
         'friend': 'adamfo',
+}
 
+gbagyi_dictionary = {
+    'good morning' : 'ha gyi fe',
+    'good evening': 'hazeeye',
+    'what is your name':'ayihogona',
+    'sit down': 'saseye',
+    'stand up': 'lakala',
+    'have u heard': 'hokuwoe',
+    'go':'lo',
+    'come':'ba',
+    'water':'nuwa',
+    'give me':'gami',
+    'baby':'bibi',
+    'head':'tukwo',
+    'thank you':'magode',
+    'drink':'si',
+    'hair':'tinyi',
+    'peace':'shimi',
+    'welcome':'mambaah',
+    'mouth':'alu',
+    'nose':'ohva',
+    'stomach': 'nubobiya',
 }
 
 language = input('What language do you want? ')
@@ -56,11 +78,19 @@ if language == 'serbian':
         print(word,' is ',translation, ' in ', language)
     else:
         print('Sorry, that word does not exist in this dictionary')
-elif  language == 'twi':
+elif language == 'twi':
     word = input('Enter a word to translate: ')
     word = word.lower()
     if word in twi_dict:
         translation = twi_dict.get(word)
-        print(word,' is ',translation, ' in ', language)
+        print(word, ' is ', translation, ' in ', language)
+    else:
+        print('Sorry, that word does not exist in this dictionary')
+elif language == 'gbagyi':
+    word = input('Enter a word to translate: ')
+    word = word.lower()
+    if word in gbagyi_dictionary:
+        translation = gbagyi_dictionary.get(word)
+        print(word, ' is ', translation, ' in ', language)
     else:
         print('Sorry, that word does not exist in this dictionary')
