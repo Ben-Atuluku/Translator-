@@ -21,7 +21,6 @@ serbian_dict = {
     'beautiful' : 'Лепо',
     'dog' : 'Пас'
 }
-
 twi_dict = {
         'please':'Mepa wo kyƐw',
         'yes':'Aane',
@@ -91,10 +90,33 @@ italian_dict = {
     "thank you" : "grazie"
 }
 
-language = input('What language do you want? ')
+portuguese_dict = {
+    'week':'semana',
+    'year':'ano',
+    'today':'hoje',
+    'tomorrow':'amanha',
+    'yesterday':'ontem',
+    'calendar':'calendario',
+    'second':'segundo',
+    'hour':'hora',
+    'minute':'minuto',
+    'clock':'relogio',
+    'can':'poder',
+    'use':'usar',
+    'do':'fazer',
+    'come':'vir',
+    'laugh':'rir',
+    'beautiful':'bonito',
+    'ugly':'feio',
+    'see':'ver',
+    'far':'longe',
+    'small':'pequeno',
+}
+
+language = input('Available languages= Serbian, Portuguese, Twi, Italian, Gbagyi \n What language do you want to translate to? ')
 language = language.lower()
 if language == 'serbian':
-    word = input('Enter a word to translate: ')
+    word = input('Enter a word to translate to ' + str(language) + ': ' )
     word = word.lower()
     if word in serbian_dict:
         translation = serbian_dict.get(word)
@@ -102,7 +124,7 @@ if language == 'serbian':
     else:
         print('Sorry, that word does not exist in this dictionary')
 elif language == 'twi':
-        word = input('Enter a word to translate: ')
+        word = input('Enter a word to translate to ' + str(language) + ': ' )
         word = word.lower()
         if word in twi_dict:
             translation = twi_dict.get(word)
@@ -110,10 +132,29 @@ elif language == 'twi':
         else:
             print('Sorry, that word does not exist in this dictionary')
 elif language == 'italian':
-    word = input('Enter a word to translate: ')
+    word = input('Enter a word to translate to ' + str(language) + ': ' )
     word = word.lower()
     if word in italian_dict:
         translation = italian_dict.get(word)
         print(word, ' is ', translation, ' in ', language)
     else:
         print('Sorry, that word does not exist in this dictionary')
+elif language == 'portuguese':
+    word = input('Enter a word to translate to ' + str(language) + ': ' )
+    word = word.lower()
+    if word in portuguese_dict:
+        translation = portuguese_dict.get(word)
+        print(word, ' is ', translation, ' in ', language)
+    else:
+        print('Sorry, that word does not exist in this dictionary')
+elif language == 'gbagyi':
+    word = input('Enter a word to translate to ' + str(language) + ': ' )
+    word = word.lower()
+    if word in gbagyi_dictionary:
+        translation = gbagyi_dictionary.get(word)
+        print(word, ' is ', translation, ' in ', language)
+    else:
+        print('Sorry, that word does not exist in this dictionary')
+else:
+    print('Sorry, that language is not available')
+    
