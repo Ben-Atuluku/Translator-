@@ -68,6 +68,29 @@ gbagyi_dictionary = {
     'stomach': 'nubobiya',
 }
 
+italian_dict = {
+    "hello" : "ciao" ,
+    "school" : "scuolo" ,
+    "good morning" : "buongiorno" ,
+    "how are you" : "come stai" ,
+    "whats your name" : "come ti chiami" ,
+    "where are you from" : "di dove sei" ,
+    "how old are you" : "quanti anni hai" ,
+    "yes" : "si" ,
+    "no" : "no" ,
+    "chair" : "sedia" ,
+    "water" : "acqua" ,
+    "love" : "amore" ,
+    "friend" : "amico" ,
+    "family" : "famiglia" ,
+    "house" : "casa" ,
+    "small" : "piccolo" ,
+    "happy" : "contento" ,
+    "big" : "grande" ,
+    "day" : "giorno" ,
+    "thank you" : "grazie"
+}
+
 language = input('What language do you want? ')
 language = language.lower()
 if language == 'serbian':
@@ -79,18 +102,18 @@ if language == 'serbian':
     else:
         print('Sorry, that word does not exist in this dictionary')
 elif language == 'twi':
+        word = input('Enter a word to translate: ')
+        word = word.lower()
+        if word in twi_dict:
+            translation = twi_dict.get(word)
+            print(word, ' is ', translation, ' in ', language)
+        else:
+            print('Sorry, that word does not exist in this dictionary')
+elif language == 'italian':
     word = input('Enter a word to translate: ')
     word = word.lower()
-    if word in twi_dict:
-        translation = twi_dict.get(word)
-        print(word, ' is ', translation, ' in ', language)
-    else:
-        print('Sorry, that word does not exist in this dictionary')
-elif language == 'gbagyi':
-    word = input('Enter a word to translate: ')
-    word = word.lower()
-    if word in gbagyi_dictionary:
-        translation = gbagyi_dictionary.get(word)
+    if word in italian_dict:
+        translation = italian_dict.get(word)
         print(word, ' is ', translation, ' in ', language)
     else:
         print('Sorry, that word does not exist in this dictionary')
